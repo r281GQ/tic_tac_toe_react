@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calorie_target_result_sum_label should render 1`] = `
+<div
+  className="board__vertical__container"
+>
+  <div
+    className="board__horizontal__container"
+  >
+    <div
+      className="main__item__container"
+      onClick="1"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="2"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="3"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="4"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="5"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="6"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="7"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="8"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+    <div
+      className="main__item__container"
+      onClick="9"
+    >
+      <div
+        className="main__item__paper"
+      />
+    </div>
+  </div>
+</div>
+`;

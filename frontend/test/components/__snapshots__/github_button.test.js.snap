@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GithubButton test should render 1`] = `
+<IconButton
+  disableTouchRipple={false}
+  disabled={false}
+  href="https://github.com/r281GQ/tic_tac_toe_react"
+  iconStyle={Object {}}
+  target="_blank"
+  tooltip="Github"
+  tooltipPosition="bottom-center"
+  touch={false}
+>
+  <FontIcon
+    className="fa fa-github white"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  />
+</IconButton>
+`;

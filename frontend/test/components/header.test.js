@@ -6,5 +6,6 @@ describe('Header test', () => {
   it('should render', () => {
     const component = shallow(<Header createNewGameHandler={value => value} />);
     expect(component).toHaveLength(1);
+    expect(component).toMatchSnapshot();
   });
 });

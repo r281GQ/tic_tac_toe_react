@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App test should render 1`] = `
+<div>
+  <Header
+    createNewGameHandler={[Function]}
+  />
+  <GameEndedDialog
+    createNewGameHandler={[Function]}
+    isModalOpen={false}
+    message=""
+  />
+  <ProgressBar
+    isCalculating={false}
+  />
+  <Board
+    board={
+      Object {
+        "1": "",
+        "2": "",
+        "3": "",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+      }
+    }
+    computerSign="o"
+    makeHumanMove={[Function]}
+    playerSign="x"
+  />
+</div>
+`;

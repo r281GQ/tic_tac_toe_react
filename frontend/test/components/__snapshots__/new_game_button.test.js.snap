@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewGameButton test should render 1`] = `
+<IconButton
+  disableTouchRipple={false}
+  disabled={false}
+  iconStyle={Object {}}
+  onClick={[Function]}
+  tooltip="New game"
+  tooltipPosition="bottom-center"
+  touch={false}
+>
+  <FontIcon
+    className="fa fa-plus-circle white"
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  />
+</IconButton>
+`;

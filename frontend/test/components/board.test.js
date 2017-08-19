@@ -23,5 +23,6 @@ describe('calorie_target_result_sum_label', () => {
       />
     );
     expect(component).toHaveLength(1);
+    expect(component).toMatchSnapshot();
   });
 });

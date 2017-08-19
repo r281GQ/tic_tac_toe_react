@@ -8,5 +8,6 @@ describe('NewGameButton test', () => {
       <NewGameButton createNewGameHandler={value => value} />
     );
     expect(component).toHaveLength(1);
+    expect(component).toMatchSnapshot();
   });
 });

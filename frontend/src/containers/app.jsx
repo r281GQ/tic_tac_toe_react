@@ -77,3 +77,4 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, actions)(App);
+export { App as PureApp };

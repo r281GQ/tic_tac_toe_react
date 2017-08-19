@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calorie_target_result_sum_label should render 1`] = `
+<Dialog
+  actions={
+    Array [
+      <FlatButton
+        disabled={false}
+        fullWidth={false}
+        label="new game"
+        labelPosition="after"
+        labelStyle={Object {}}
+        onClick={[Function]}
+        onKeyboardFocus={[Function]}
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        onTouchStart={[Function]}
+        primary={false}
+        secondary={false}
+    />,
+    ]
+  }
+  autoDetectWindowHeight={true}
+  autoScrollBodyContent={false}
+  modal={true}
+  open={false}
+  repositionOnUpdate={true}
+  title="Tic Tac Toe"
+/>
+`;

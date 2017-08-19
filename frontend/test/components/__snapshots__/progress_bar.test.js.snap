@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressBar test should render 1`] = `
+<div
+  className="progress__absent"
+/>
+`;
