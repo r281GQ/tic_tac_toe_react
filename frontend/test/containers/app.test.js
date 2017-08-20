@@ -7,6 +7,8 @@ describe('App test', () => {
   it('should render', () => {
     const spyNewGame = sinon.spy();
     const spyMakeHumanMove = sinon.spy();
+    const spyComputerMove = sinon.spy();
+    const spyCheckForGameState = sinon.spy();
 
     const component = shallow(
       <PureApp
@@ -22,6 +24,8 @@ describe('App test', () => {
           9: ''
         }}
         makeHumanMove={spyMakeHumanMove}
+        makeComputerMove={spyComputerMove}
+        checkForGameState={spyCheckForGameState}
         playerSign="x"
         computerSign="o"
         isCalculating={false}
@@ -39,5 +43,7 @@ describe('App test', () => {
 
     expect(spyMakeHumanMove.calledWith(1)).toBeTruthy();
     expect(spyNewGame.calledOnce).toBeTruthy();
+    expect(spyComputerMove.calledOnce).toBeTruthy();
+    expect(spyCheckForGameState.calledTwice).toBeTruthy();
   });
 });

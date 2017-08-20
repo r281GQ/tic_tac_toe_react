@@ -16,7 +16,12 @@ class App extends Component {
   }
 
   _makeHumanMove(number) {
-    return () => this.props.makeHumanMove(number);
+    return () => {
+      this.props.makeHumanMove(number);
+      this.props.checkForGameState();
+      this.props.makeComputerMove();
+      this.props.checkForGameState();
+    };
   }
 
   _createNewGame() {
@@ -57,6 +62,8 @@ App.propTypes = {
     9: PropTypes.string
   }).isRequired,
   makeHumanMove: PropTypes.func.isRequired,
+  makeComputerMove: PropTypes.func.isRequired,
+  checkForGameState: PropTypes.func.isRequired,
   playerSign: PropTypes.string.isRequired,
   computerSign: PropTypes.string.isRequired,
   isCalculating: PropTypes.bool,

@@ -1,5 +1,11 @@
-import * as board from './../actions/board';
 import * as _ from 'lodash';
+
+import * as board from './../actions/board';
+import {
+  getComputerMove,
+  isGameWon,
+  movesLeft
+} from './../../services/minimax';
 
 const INITIAL_STATE = {
   board: {
@@ -22,9 +28,9 @@ const INITIAL_STATE = {
   }
 };
 
-const handleMove = (state, payload) => {
-  const newState = _.cloneDeep(state);
-  newState.board[payload.number] = payload.player;
+const handleHumanMove = (state, payload) => {
+  let newState = _.cloneDeep(state);
+  newState.board[payload] = 'PLAYER';
   return newState;
 };
 
@@ -71,17 +77,34 @@ const handleOpenModal = (state, payload) => {
   return newState;
 };
 
-const handleCloseModal = state => {
+const handleComputerMove = state => {
   const newState = _.cloneDeep(state);
-  newState.settings.isModalOpen = false;
-  newState.settings.message = '';
+  newState.board[getComputerMove(newState.board)] = 'COMPUTER';
+  return newState;
+};
+
+const handleCheckGameState = state => {
+  const newState = _.cloneDeep(state);
+  if (isGameWon('COMPUTER', newState.board)) {
+    newState.settings.isModalOpen = true;
+    newState.settings.message = 'You have lost!';
+  }
+
+  if (movesLeft(newState.board).length === 0) {
+    newState.settings.isModalOpen = true;
+    newState.settings.message = 'No more steps left!';
+  }
   return newState;
 };
 
 const reducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
-    case board.MAKE_MOVE:
-      return handleMove(state, payload);
+    case board.CHECK_GAME_STATE:
+      return handleCheckGameState(state);
+    case board.MAKE_COMPUTER_MOVE:
+      return handleComputerMove(state);
+    case board.MAKE_HUMAN_MOVE:
+      return handleHumanMove(state, payload);
     case board.RESET_BOARD:
       return handleReset();
     case board.INIT_CALC:
@@ -90,8 +113,6 @@ const reducer = (state = INITIAL_STATE, { type, payload }) => {
       return handleCloseCalc(state);
     case board.OPEN_MODAL:
       return handleOpenModal(state, payload);
-    case board.CLOSE_MODAL:
-      return handleCloseModal(state);
     default:
       return state;
   }

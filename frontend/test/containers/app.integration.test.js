@@ -16,6 +16,8 @@ describe('App integration test', () => {
   it('should render', () => {
     const spyNewGame = sinon.spy();
     const spyMakeHumanMove = sinon.spy();
+    const spyComputerMove = sinon.spy();
+    const spyCheckForGameState = sinon.spy();
 
     const component = mount(
       <PureApp
@@ -31,6 +33,8 @@ describe('App integration test', () => {
           9: ''
         }}
         makeHumanMove={spyMakeHumanMove}
+        makeComputerMove={spyComputerMove}
+        checkForGameState = {spyCheckForGameState}
         playerSign="x"
         computerSign="o"
         isCalculating={false}

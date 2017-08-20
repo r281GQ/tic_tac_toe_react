@@ -5,7 +5,7 @@ const webpack = require('webpack');
 
 const config = {
   entry: {
-    bundle: './frontend/src/index.jsx'
+    bundle: ['babel-polyfill', './frontend/src/index.jsx']
   },
   output: {
     path: path.join(__dirname, 'build'),
