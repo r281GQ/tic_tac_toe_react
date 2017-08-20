@@ -4,6 +4,7 @@
   "description": "tic tac toe built with react",
   "main": "index.js",
   "scripts": {
+    "test:build": "jest",
     "test:jest": "jest --watchAll",
     "test:coverage": "jest --coverage",
     "serve": "webpack-dev-server --hot --inline",

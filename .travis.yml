@@ -3,8 +3,8 @@ before_install:
 - npm install -g npm@latest
 node_js:
 - '8'
-script: 
-- npm run test:jest
+script:
+- npm run test:build
 - npm run build
 deploy:
   provider: heroku
