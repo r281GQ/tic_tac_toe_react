@@ -1,0 +1,14 @@
+language: node_js
+before_install:
+- npm install -g npm@latest
+node_js:
+- '8'
+script: 
+- npm run test:jest
+- npm run build
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  app: tic-tac-toe-react-material
+  api_key:
+    secure: pi4puaKuGw9NBFqJ2OAY3XK/LK+xpQM39MmKJshgEeKLj1SMsS8F8vZAumDN8LeKPwVx4J1SuE+SnjJaMXVybelWMEzSI5h1h/gGlZaJLfr78XCcc7uPVf4x2mUO66HaC8W4/MeVDH0TYoZ2epC5WN5Z926NBZ3ok1ZoEeggKJBy6T+HyX75tp/hwugb1J2TV164R+sXlucUNfAUiEmGiI7dWFqgkUFsvlygLVwFFWTka0ScYw7HrXV4jlWwYDAqXYwtnBfDE7+ALGIy/HtDdn0ChqGvt5HXdXB5Jzyq0CNZcm+RrMa9kNeT6904gIrVREz+5J2k6kr2/BLMZqmQFL0oP9YbO6eWjG2DVCl0wnLl4q/oBnEK26psBVI2phZAz9BwuTtdSyRKs2zCyjHuyQmJSM7pfndAtDJAztkQS18TLseZN84exLK3fBbSCL7zaSKS7smwXv/+kD3Pwa7duzetBtPnWwDOqL75Po9LS2a9ToXntqnjNWuH1Vehmbf6gX8rfsZL7VmcsXYKvhDb/bXPm+FXtlT1WQpTKGKA4eys/BNKhirfmG4oUlp8gcVa0jCFiP6fK/8FOSAxB2JeTiA2JTkPwz7O84WzqKdxzL/7/znVM+pnwnbyJJJIyRm6Zd43pY6mkALo7yrsBMKS6JrRWKcnpoohpXJTpWFy9EY=
