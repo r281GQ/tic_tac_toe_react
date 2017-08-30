@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import * as actions from './../store/action_creators/board';
 import ProgressBar from './../components/progress_bar';
 import GameEndedDialog from './../components/game_ended_dialog';
 import Board from './../components/board';
 import Header from './../components/header';
+import Logo from './../../../assets/icon.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +33,11 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Tic Tac Toe</title>
+          <link rel="icon" href={`${Logo}`} />
+        </Helmet>
         <Header createNewGameHandler={this._createNewGame} />
         <GameEndedDialog
           isModalOpen={this.props.isModalOpen}
