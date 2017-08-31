@@ -2,6 +2,21 @@
 
 exports[`App test should render 1`] = `
 <div>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <meta
+      charSet="utf-8"
+    />
+    <title>
+      Tic Tac Toe
+    </title>
+    <link
+      href="mock-file"
+      rel="icon"
+    />
+  </HelmetWrapper>
   <Header
     createNewGameHandler={[Function]}
   />
